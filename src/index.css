@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .hover-text {
+    @apply transition-all duration-200 hover:text-blue-600 hover:scale-105;
+  }
+
+  .nav-link {
+    @apply transition-all duration-200 hover:text-blue-600 hover:-translate-y-0.5;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .hover-glow:hover {
+    @apply scale-105 text-shadow[0_0_15px_rgba(255,_255,_255,_0.8)];
+  }
+}
+
+.carousel-slide {
+  @apply transition-opacity duration-1000 ease-in-out;
+}
+/* Add hover effect for the heading text */
+h2:hover {
+  color: gold;
+}
+
+/* Add hover effect for the Book Now button */
+button:hover {
+  background-color: gold;
+  color: black; /* Change the text color to black to contrast with gold */
+}
+/* CSS for smooth transitions */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
