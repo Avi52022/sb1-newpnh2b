@@ -53,7 +53,7 @@ function BusRentalPage() {
       type: 'AC',
       seats: Array.from({ length: 40 }, (_, i) => ({
         id: `seat-${i + 1}`,
-        number: `${i + 1}`,
+        number: `NPR{i + 1}`,
         isBooked: Math.random() > 0.7,
         type: i % 2 === 0 ? 'window' : 'aisle'
       }))
